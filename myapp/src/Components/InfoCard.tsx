@@ -2,15 +2,15 @@
 import React, { useState } from "react"
 import css from "./InfoCard.module.css"
 
-export function InfoCard(): React.JSX.Element{
+export function InfoCard(props:any): React.JSX.Element{
 
-    const [name, setName] = useState<string>("Daniel")  
-    const [age, setAge] = useState<number>(26)  
-    const [hobbies, setHobbies] = useState<string>("Computer Science")
+    const [name, setName] = useState<string>(props.name)  
+    const [age, setAge] = useState<number>(props.age)  
+    const [hobbies, setHobbies] = useState<string>(props.hobbies)
     const [isVisible, setVisible] = useState<boolean>(false)
     const [isExtra, setExtra] = useState<boolean>(false)
-    const [location, setLocation] = useState<string>('Petah Tikva')
-    const [occupation, setOccupation] = useState<string>('Student')
+    const [location, setLocation] = useState<string>(props.location)
+    const [occupation, setOccupation] = useState<string>(props.occupation)
     const [items, setItems] = useState(['select', 'hobbies', 'age','location','occupation'])
     const [selectedValue, setSelected] = useState<string>("select")
 
@@ -26,16 +26,16 @@ export function InfoCard(): React.JSX.Element{
         switch(selectedValue){
             case 'select': break;
             case 'hobbies': {
-                if (value.trim() != '') setHobbies(value)
+                if (value.trim() !== '') setHobbies(value)
                 break;}
             case 'age': {
-                if (value.trim() != '') setAge(+value)
+                if (value.trim() !== '') setAge(+value)
                 break;}
             case 'location': {
-                if (value.trim() != '') setLocation(value)
+                if (value.trim() !== '') setLocation(value)
                 break;}
             case 'occupation': {
-                if (value.trim() != '') setOccupation(value)
+                if (value.trim() !== '') setOccupation(value)
                 break;}
         }
         

@@ -7,7 +7,7 @@ import { InfoCard } from './Components/InfoCard';
 function App() {
   return (
     <div className="App">
-      <InfoCard />
+      <InfoCard name={'Daniel'} age={26} hobbies={"Computer Science"} location={"Petah Tikva"} occupation={"Student"}/>
     </div>
   );
 }
