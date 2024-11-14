@@ -1,8 +1,9 @@
 
 import React, { useState } from "react"
 import css from "./InfoCard.module.css"
+import { IInfoCard } from "../types"
 
-export function InfoCard(props:any): React.JSX.Element{
+export function InfoCard(props:IInfoCard): React.JSX.Element{
 
     const [name, setName] = useState<string>(props.name)  
     const [age, setAge] = useState<number>(props.age)  
@@ -44,7 +45,7 @@ export function InfoCard(props:any): React.JSX.Element{
         setSelected(event.target.value);
     };
     return(
-        <div>
+        <div className={css.container}>
             <p style={{color: isVisible? 'green':'red'}}>My name is {name}</p>
             <button onClick={btnClick}> {isVisible? "Hide Info": "Show Info"}</button>
             <input id='chkExtra' type='checkbox' onChange={chkClick}/><label htmlFor='chkExtra'>Extra info</label>
