@@ -5,14 +5,14 @@ import { IInfoCard } from "../types"
 
 export function InfoCard(props:IInfoCard): React.JSX.Element{
 
-    const [name, setName] = useState<string>(props.name)  
+    const [name/*, setName*/] = useState<string>(props.name)  
     const [age, setAge] = useState<number>(props.age)  
     const [hobbies, setHobbies] = useState<string>(props.hobbies)
     const [isVisible, setVisible] = useState<boolean>(false)
     const [isExtra, setExtra] = useState<boolean>(false)
     const [location, setLocation] = useState<string>(props.location)
     const [occupation, setOccupation] = useState<string>(props.occupation)
-    const [items, setItems] = useState(['select', 'hobbies', 'age','location','occupation'])
+    const [items/*, setItems*/] = useState(['select', 'hobbies', 'age','location','occupation'])
     const [selectedValue, setSelected] = useState<string>("select")
 
     function btnClick(){
