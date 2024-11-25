@@ -1,4 +1,4 @@
-import {createContext, ReactNode, useState, useContext} from "react";
+import React,{createContext, ReactNode, useState, useContext} from "react";
 import { ITheme } from "../Interfaces/ITheme";
 const ThemeContext = createContext<ITheme | undefined>(undefined)
 

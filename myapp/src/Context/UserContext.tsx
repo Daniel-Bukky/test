@@ -1,6 +1,6 @@
 import React, {createContext} from "react";
 
-import { IUSer } from "../interfaces/IUser";
+import { IUSer } from "../Interfaces/IUser";
 
 const UserContext = createContext<IUSer | undefined>(undefined)
 

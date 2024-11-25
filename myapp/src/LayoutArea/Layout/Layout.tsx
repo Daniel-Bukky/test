@@ -8,7 +8,7 @@ import UserContext from "../../Context/UserContext"
 import ThemeContext from "../../Context/ThemeContext"
 import TodoContext from "../../Context/TodoContext"
 
-import { ITodo } from "../../interfaces/ITodo"
+import { ITodo } from "../../Interfaces/ITodo"
 import React, { useState } from "react"
 import { text } from "stream/consumers"
 export function Layout(): React.JSX.Element {
