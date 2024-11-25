@@ -1,21 +1,29 @@
 import {Routes, Route} from "react-router-dom"
+import {Home} from "../pages/Home/Home"
+import {About} from "../pages/About/About"
+import {Posts} from "../pages/Posts/Posts"
 
-import { Home } from "../pages/Home/Home"
-import { About } from "../pages/About/About"
-import React from "react"
-import { Team } from "../pages/Team/Team"
-import { PageNotFound } from "../pages/PageNotFound/PageNotFound"
+import {PageNotFound} from "../pages/PageNotFound/PageNotFound"
+import React, { useContext } from "react"
+import ThemeContext from "../Context/ThemeContext"
 
-
-export function Routing():React.JSX.Element{
+export function Routing():JSX.Element{
+    const theme = useContext(ThemeContext)
+    const siteStyle = {
+        backgroundColor:theme?.isDarkMode?"black":"white",
+        color:theme?.isDarkMode?"white":"black",
+        height:"100vh"
+    }
 
     return(
+        <div style={siteStyle}>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/home" element={<Home/>}/>
                 <Route path="/about" element={<About/>}/>
-                <Route path="/team" element={<Team/>}/>
+                <Route path="/posts" element={<Posts/>}/>
                 <Route path="*" element={<PageNotFound/>}/>
             </Routes>
+        </div>
     )
 }

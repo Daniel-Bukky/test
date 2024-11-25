@@ -1,5 +1,10 @@
-import {createContext} from "react";
-import { IUser } from "../Interfaces/IUser";
-const UserContext = createContext<IUser | undefined>(undefined)
+import React, {createContext} from "react";
 
-export default UserContext
+import { IUSer } from "../interfaces/IUser";
+
+const UserContext = createContext<IUSer | undefined>(undefined)
+
+export default  UserContext; 
+
+
+

@@ -1,11 +1,10 @@
-import React from "react";
-import {Layout} from "../../LayoutArea/Layout/Layout"
+import React from "react"
+export function Home():React.JSX.Element{
 
-export function Home(): React.JSX.Element{
 
     return(
         <div>
-            <Layout />
+            content
         </div>
     )
 }

@@ -1,8 +1,10 @@
-import React from "react";
-
+import React from "react"
 export function PageNotFound():React.JSX.Element{
 
+
     return(
-        <div>Page Not Found</div>
+        <div>
+            PageNotFound
+        </div>
     )
 }

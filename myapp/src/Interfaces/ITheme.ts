@@ -1,4 +1,5 @@
 export interface ITheme{
-    isDarkMode: boolean,
-    toggleTheme():()=>void
+    isDarkMode:boolean;
+    siteStyle:Object,
+    toggleTheme:()=>void;
 }
