@@ -1,4 +1,4 @@
-import {IPost} from "../../../interfaces/IPost"
+import {IPost} from "../../../Interfaces/IPost"
 import React from "react"
 export function Post({post} : {post: IPost}):React.JSX.Element{
 
